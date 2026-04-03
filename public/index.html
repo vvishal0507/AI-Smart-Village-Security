@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Smart Village Security System</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+
+  <div class="container">
+    <header class="hero">
+      <div class="hero-left">
+        <div class="hero-badge-row">
+          <span class="mini-badge">Gemma 4 Good Hackathon Demo</span>
+          <span class="mini-badge">Offline AI</span>
+          <span class="mini-badge outline" id="serverStatus">Backend: Checking...</span>
+        </div>
+
+        <h1>🚨 AI Smart Village Security System</h1>
+
+        <p class="subtitle">
+          Privacy-first offline AI threat detection for rural safety using simulated
+          sensor-less sensing, real-time alerts, and demo-ready manual controls.
+        </p>
+
+        <div class="hero-stats">
+          <div class="hero-stat-card">
+            <span>Model Mode</span>
+            <strong>Offline Demo AI</strong>
+          </div>
+          <div class="hero-stat-card">
+            <span>Deployment</span>
+            <strong>Localhost Prototype</strong>
+          </div>
+          <div class="hero-stat-card">
+            <span>Core Goal</span>
+            <strong>Village Safety</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-panel">
+          <p class="panel-label">System Readiness</p>
+          <h2>Hackathon Demo Ready</h2>
+          <p>
+            Use the manual buttons to present SAFE and ALERT events on demand.
+            This helps you record a clean demo video and capture better screenshots.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="top-grid">
+      <div class="card status-card highlight-card">
+        <div class="card-top-row">
+          <div>
+            <p class="section-tag">Live Threat Status</p>
+            <h2>Current Status</h2>
+          </div>
+          <div id="liveDot" class="live-dot"></div>
+        </div>
+
+        <div id="statusBadge" class="status safe">SAFE</div>
+        <p id="statusMessage" class="status-message">
+          System started. Waiting for activity...
+        </p>
+
+        <div class="meta meta-3">
+          <div class="meta-box">
+            <span>Risk Score</span>
+            <strong id="riskScore">0</strong>
+          </div>
+          <div class="meta-box">
+            <span>Location</span>
+            <strong id="location">Village Entrance</strong>
+          </div>
+          <div class="meta-box">
+            <span>Time</span>
+            <strong id="eventTime">--</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="card controls-card">
+        <p class="section-tag">Manual Demo Controls</p>
+        <h2>Trigger Events Instantly</h2>
+        <p class="muted-text">
+          During presentation, stop the Python auto detector and use these buttons for full control.
+        </p>
+
+        <div class="controls-row">
+          <button id="safeBtn" class="control-btn safe-btn">Trigger SAFE</button>
+          <button id="alertBtn" class="control-btn alert-btn">Trigger ALERT</button>
+        </div>
+
+        <div class="info-banner">
+          <strong>Tip:</strong> For clean screenshots, keep only the backend running and use manual buttons.
+        </div>
+
+        <p id="controlMessage" class="control-message">
+          Ready for manual demo actions.
+        </p>
+      </div>
+    </section>
+
+    <section class="mid-grid">
+      <div class="card">
+        <p class="section-tag">System Workflow</p>
+        <h2>How This Demo Works</h2>
+
+        <div class="flow-grid">
+          <div class="flow-step">
+            <div class="step-no">1</div>
+            <h3>Data Simulation</h3>
+            <p>Python creates activity patterns that represent normal and suspicious behavior.</p>
+          </div>
+
+          <div class="flow-step">
+            <div class="step-no">2</div>
+            <h3>AI Detection</h3>
+            <p>Logic calculates a risk score and marks the event as SAFE or ALERT.</p>
+          </div>
+
+          <div class="flow-step">
+            <div class="step-no">3</div>
+            <h3>Backend Update</h3>
+            <p>Node.js receives the event and pushes live updates using Socket.IO.</p>
+          </div>
+
+          <div class="flow-step">
+            <div class="step-no">4</div>
+            <h3>Dashboard View</h3>
+            <p>The web interface shows the latest security event with history and controls.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <p class="section-tag">Hackathon Highlights</p>
+        <h2>Why This Project Matters</h2>
+
+        <div class="feature-list">
+          <div class="feature-item">
+            <strong>Privacy First</strong>
+            <span>No camera-based surveillance required for the demo concept.</span>
+          </div>
+
+          <div class="feature-item">
+            <strong>Offline Friendly</strong>
+            <span>Designed as a local-first system for rural or low-connectivity areas.</span>
+          </div>
+
+          <div class="feature-item">
+            <strong>Low Cost Vision</strong>
+            <span>Can be extended toward affordable village safety deployments.</span>
+          </div>
+
+          <div class="feature-item">
+            <strong>Demo Ready</strong>
+            <span>Manual controls and live events make hackathon presentation easier.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card architecture-card">
+      <div class="card-heading-row">
+        <div>
+          <p class="section-tag">Architecture Overview</p>
+          <h2>Project Flow Diagram</h2>
+        </div>
+      </div>
+
+      <div class="architecture-flow">
+        <div class="arch-box">Python Detector / Manual Controls</div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-box">Node.js Backend API</div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-box">Socket.IO Live Updates</div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-box">Security Dashboard</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-heading-row">
+        <div>
+          <p class="section-tag">Event Timeline</p>
+          <h2>Recent Events</h2>
+        </div>
+        <div class="timeline-pill">Last 12 events</div>
+      </div>
+
+      <div id="historyList" class="history-list"></div>
+    </section>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
